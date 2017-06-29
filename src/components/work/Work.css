@@ -1,0 +1,10 @@
+.Work {
+  background-color: #ffe1e3;
+  color: #000;
+  text-align: center;
+}
+
+.Work h1 {
+  font-family: 'Maven Pro', sans-serif;
+  text-transform: uppercase;
+}

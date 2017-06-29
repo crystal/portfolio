@@ -1,5 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:500');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: tahoma;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+.Content {
+  margin: 0 auto;
+  max-width: 1000px;
+  overflow: auto;
+  padding: 50px 0;
 }

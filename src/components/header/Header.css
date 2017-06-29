@@ -1,0 +1,47 @@
+.Header {
+  background-color: #212025;
+  color: #fefcfd;
+  text-transform: uppercase;
+}
+
+.Header li {
+  color: white;
+  display: inline-block;
+  font-family: 'Maven Pro', sans-serif;
+  list-style: none;
+  padding: 20px;
+}
+
+.Header li a {
+  color: #fff;
+}
+
+.Header li a:hover{
+  color: #ffe1e3;
+}
+
+.Header ul {
+  margin: 0;
+  padding: 0;
+}
+
+.HeaderLinks {
+  float: left;
+}
+
+.HeaderLogo {
+  float:left;
+  padding: 0 20px 0 0;
+}
+
+.HeaderLogo img {
+  height: 58px
+}
+
+.HeaderSocial {
+  float: right;
+}
+
+.Header .Content {
+  padding: 10px 0;
+}
