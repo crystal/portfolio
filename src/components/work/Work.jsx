@@ -5,9 +5,9 @@ class Work extends Component {
   render() {
     return (
       <div className="Work">
-        <div className="Content">
+        <section>
           <h1>My Work</h1>
-        </div>
+        </section>
       </div>
     );
   }

@@ -7,7 +7,7 @@ class Header extends Component {
   render() {
     return (
       <div className="Header">
-        <div className="Content">
+        <section>
           <div className="HeaderLogo">
             <img alt="Logo" src={Image} />
           </div>
@@ -22,7 +22,7 @@ class Header extends Component {
             <li><a href="/about">Blog</a></li>
             <li><a href="/work">Twitter</a></li>
           </ul>
-        </div>
+        </section>
       </div>
     );
   }
