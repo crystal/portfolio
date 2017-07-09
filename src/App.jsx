@@ -8,8 +8,6 @@ import { routerMiddleware, routerReducer, syncHistoryWithStore } from 'react-rou
 
 import MainTemplate from './templates/main/Main';
 
-import HomePage from './pages/home/Home';
-
 import './App.sass';
 
 const router = routerMiddleware(browserHistory);
@@ -30,7 +28,7 @@ const history = syncHistoryWithStore(browserHistory, store);
 render(
   <Router history={history}>
     <Route path="/" component={MainTemplate}>
-      <IndexRoute component={HomePage} />
+      <IndexRoute />
     </Route>
   </Router>,
   document.getElementById('app')
