@@ -1,34 +1,31 @@
 import React, { Component } from 'react';
-import './Work.css';
 
-import DeskImage from './desk.jpg';
-import FriendImage from './friends.jpg';
-import WakeupImage from './wakeup.jpg'
+import styles from './Work.sass';
 
 class Work extends Component {
   render() {
     return (
-      <div className="Work">
+      <div className={styles.work}>
         <section>
           <h1>My Work</h1>
-          <ul className="WorkTiles">
+          <ul className={styles.tiles}>
             <li>
-              <div className="WorkTile">
-                <div className="WorkImage" style={{ backgroundImage: `url(${DeskImage})` }}/>
+              <div className={styles.tile}>
+                <div className={styles.image} style={{ backgroundImage: 'url(images/desk.jpg)' }}/>
                 <h3>Templist</h3>
                 <p>Templist is a Trello Integration made in React. Select to-do list templates and export them to Trello!</p>
               </div>
             </li>
             <li>
-              <div className="WorkTile">
-                <div className="WorkImage" style={{ backgroundImage: `url(${FriendImage})` }}/>
+              <div className={styles.tile}>
+                <div className={styles.image} style={{ backgroundImage: 'url(images/friends.jpg)' }}/>
                 <h3>Midpoint</h3>
                 <p>Midpoint helps friends meet in the middle! Find points of interest - somewhere around the middle.</p>
               </div>
             </li>
             <li>
-              <div className="WorkTile">
-                <div className="WorkImage" style={{ backgroundImage: `url(${WakeupImage})` }}/>
+              <div className={styles.tile}>
+                <div className={styles.image} style={{ backgroundImage: 'url(images/wakeup.jpg)' }}/>
                 <h3>Alexa Skill: A New Day</h3>
                 <p>A New Day guides you through your morning routine to keep you on task and on schedule.</p>
               </div>

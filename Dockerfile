@@ -1,2 +1,5 @@
 FROM node:6
-RUN npm install -g create-react-app
+
+COPY . /app
+WORKDIR /app
+RUN npm install
