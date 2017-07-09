@@ -1,23 +1,56 @@
+.image
+  background-position: center
+  background-repeat: no-repeat
+  height: 125px
+  margin: 0 auto 25px auto
+  width: 125px
+
+  &.angular
+    background-image: url(images/tech/angular.svg)
+
+  &.ec2
+    background-image: url(images/tech/ec2.svg)
+
+  &.dynamodb
+    background-image: url(images/tech/dynamodb.svg)
+
+  &.express
+    background-image: url(images/tech/express.svg)
+
+  &.firebase
+    background-image: url(images/tech/firebase.svg)
+
+  &.javascript
+    background-image: url(images/tech/javascript.svg)
+
+  &.lambda
+    background-image: url(images/tech/lambda.svg)
+
+  &.nodejs
+    background-image: url(images/tech/nodejs.svg)
+
+  &.react
+    background-image: url(images/tech/react.svg)
+
 .tech
-  background-color: #252d54
-  color: #FFF
+  color: #000
   text-align: center
 
 .tile
+  padding: 0 0 50px 0
 
   h3
-    padding: 20px 20px 0 20px
-
-  p
-    padding: 0 20px 20px 20px
+    color: #ebc17d
+    margin: 20px 20px 0 20px
 
 .tiles
-  display: flex
   list-style: none
   margin: 0
+  overflow: auto
   padding: 0
 
   li
+    float: left
     margin: 0
     padding: 0 10px
-    width: 33.3%
+    width: 25%
