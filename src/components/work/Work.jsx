@@ -7,7 +7,7 @@ class Work extends Component {
     return (
       <div className={styles.work}>
         <section>
-          <h1>My Work</h1>
+          <h2>My Work</h2>
           <ul className={styles.tiles}>
             <li>
               <div className={styles.tile}>

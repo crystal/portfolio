@@ -7,7 +7,7 @@ class Tech extends Component {
     return (
       <div className={styles.tech}>
         <section>
-          <h1>Tech</h1>
+          <h2>Tech</h2>
           <ul className={styles.tiles}>
             <li>
               <div className={styles.tile}>

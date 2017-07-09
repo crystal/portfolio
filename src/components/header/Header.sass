@@ -1,32 +1,26 @@
 .header
   background-color: #212025
   color: #fefcfd
+  font-family: 'Exo 2'
+  font-weight: 100
   left: 0
   position: fixed
   text-transform: uppercase
   top: 0
   width: 100%
 
+  a
+    opacity: .75
+    transition: opacity .2s
+
+    &:hover
+      opacity: 1
+
   li
     color: white
     display: inline-block
-    font-family: 'Maven Pro', sans-serif
     list-style: none
     padding: 20px
-
-    a
-      background-image: url(images/icons/medium.svg)
-      background-repeat: no-repeat
-      background-position: center center
-      background-size: contain
-      color: transparent
-      display: inline-block
-      height: 24px
-      overflow: none
-      width: 24px
-
-      &:hover
-        color: #ffe1e3
 
   section
     padding: 10px 0
@@ -39,7 +33,9 @@
   float: left
 
   a
+    color: #FFF
     cursor: pointer
+    display: inline-block
 
 .logo
   float: left
@@ -47,6 +43,28 @@
 
   img
     height: 58px
+    width: 58px
 
 .social
   float: right
+
+  a
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+    color: transparent
+    display: inline-block
+    height: 24px
+    opacity: .75
+    overflow: none
+    transition: opacity .2s
+    width: 24px
+
+    &.github
+      background-image: url(images/icons/github.svg)
+
+    &.medium
+      background-image: url(images/icons/medium.svg)
+
+    &.twitter
+      background-image: url(images/icons/twitter.svg)

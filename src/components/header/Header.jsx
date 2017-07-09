@@ -24,14 +24,14 @@ class Header extends Component {
             </li>
             <li>
               <Link offset={-81} to="tech" smooth>
-                Technology
+                Tech
               </Link>
             </li>
           </ul>
           <ul className={styles.social}>
-            <li><a href="http://github.com/crystal">Github</a></li>
-            <li><a href="https://medium.com/@crys.tate">Blog</a></li>
-            <li><a href="https://twitter.com/crystal_tate">Twitter</a></li>
+            <li><a className={styles.github} href="http://github.com/crystal">Github</a></li>
+            <li><a className={styles.medium} href="https://medium.com/@crys.tate">Blog</a></li>
+            <li><a className={styles.twitter} href="https://twitter.com/crystal_tate">Twitter</a></li>
           </ul>
         </section>
       </div>
