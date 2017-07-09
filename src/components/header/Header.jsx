@@ -13,17 +13,17 @@ class Header extends Component {
           </div>
           <ul className={styles.links}>
             <li>
-              <Link to="about" smooth>
+              <Link offset={-81} to="about" smooth>
                 About
               </Link>
             </li>
             <li>
-              <Link to="work" smooth>
+              <Link offset={-81} to="work" smooth>
                 Work
               </Link>
             </li>
             <li>
-              <Link to="tech" smooth>
+              <Link offset={-81} to="tech" smooth>
                 Technology
               </Link>
             </li>

@@ -15,6 +15,7 @@ class MainTemplate extends Component {
     return (
       <div className={styles.main}>
         <Header />
+        <div className={styles.blank} />
         <Element name="about">
           <Me />
         </Element>
