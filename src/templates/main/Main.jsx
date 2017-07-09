@@ -4,6 +4,7 @@ import { Element } from 'react-scroll';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 
+import Contact from '../../components/contact/Contact';
 import Me from '../../components/me/Me';
 import Tech from '../../components/tech/Tech';
 import Work from '../../components/work/Work';
@@ -24,6 +25,9 @@ class MainTemplate extends Component {
         </Element>
         <Element name="tech">
           <Tech />
+        </Element>
+        <Element name="contact">
+          <Contact />
         </Element>
         <Footer />
       </div>

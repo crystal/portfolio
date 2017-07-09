@@ -27,6 +27,11 @@ class Header extends Component {
                 Tech
               </Link>
             </li>
+            <li>
+              <Link offset={-81} to="contact" smooth>
+                Contact
+              </Link>
+            </li>
           </ul>
           <ul className={styles.social}>
             <li><a className={styles.github} href="http://github.com/crystal">Github</a></li>
