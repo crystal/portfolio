@@ -1,25 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
+import thunk from 'redux-thunk';
 
-import Header from './components/header/Header';
-import Me from './components/me/Me';
-import Work from './components/work/Work';
-import Footer from './components/footer/Footer';
-import Tech from './components/tech/Tech';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+import { render } from 'react-dom';
+import { IndexRoute, Router, Route, browserHistory } from 'react-router';
+import { routerMiddleware, routerReducer, syncHistoryWithStore } from 'react-router-redux';
+
+import MainTemplate from './templates/main/Main';
+
+import HomePage from './pages/home/Home';
 
 import './App.sass';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Header />
-        <Me />
-        <Work />
-        <Tech />
-        <Footer />
-      </div>
-    );
-  }
-}
+const router = routerMiddleware(browserHistory);
 
-export default App;
+const store = createStore(
+  combineReducers({
+    routing: routerReducer
+  }),
+  applyMiddleware(
+    thunk,
+    router
+  )
+);
+
+// if path changes in url, it changes in app too
+const history = syncHistoryWithStore(browserHistory, store);
+
+render(
+  <Router history={history}>
+    <Route path="/" component={MainTemplate}>
+      <IndexRoute component={HomePage} />
+    </Route>
+  </Router>,
+  document.getElementById('app')
+);

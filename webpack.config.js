@@ -19,7 +19,7 @@ module.exports = {
   // local dev server configurations
   devServer: {
     host: '0.0.0.0',
-    port: 8080,
+    port,
     contentBase: './docs',
     publicPath: '/',
     hot: true,
