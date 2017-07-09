@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import React from 'react';
 import thunk from 'redux-thunk';
 
@@ -9,6 +10,15 @@ import { routerMiddleware, routerReducer, syncHistoryWithStore } from 'react-rou
 import MainTemplate from './templates/main/Main';
 
 import './App.sass';
+
+firebase.initializeApp({
+  apiKey: 'AIzaSyDWHV1sy3rXHm7yVX3J4qTvsNPTwlC1lBQ',
+  authDomain: 'portfolio-4a29a.firebaseapp.com',
+  databaseURL: 'https://portfolio-4a29a.firebaseio.com',
+  projectId: 'portfolio-4a29a',
+  storageBucket: 'portfolio-4a29a.appspot.com',
+  messagingSenderId: '891485410008'
+});
 
 const router = routerMiddleware(browserHistory);
 
