@@ -12,6 +12,29 @@ const app = [
 ];
 const baseHref = isProduction ? '/portfolio/' : '/';
 
+const plugins = [
+  new webpack.DefinePlugin({
+    CONFIG: JSON.stringify({
+      baseHref
+    })
+  }),
+  new CopyWebpackPlugin([
+    { from: 'images', to: 'images' }
+  ]),
+  new HandlebarsWebpackPlugin({
+    entry: path.join(process.cwd(), 'src', '*.hbs'),
+    output: path.join(process.cwd(), 'docs', '[name].html'),
+    data: {
+      baseHref
+    }
+  })
+];
+if (!isProduction) {
+  plugins.push(
+    new webpack.HotModuleReplacementPlugin()
+  );
+}
+
 module.exports = {
   // this is the path to your source files
   context: path.join(__dirname, 'src'),
@@ -36,25 +59,7 @@ module.exports = {
   },
   // two plugins we're using. one copies images, html & css
   // from the src directory to the docs folder
-  plugins: [
-    new webpack.DefinePlugin({
-      CONFIG: JSON.stringify({
-        baseHref
-      })
-    }),
-    new CopyWebpackPlugin([
-      { from: 'images', to: 'images' }
-    ]),
-    new HandlebarsWebpackPlugin({
-      entry: path.join(process.cwd(), 'src', '*.hbs'),
-      output: path.join(process.cwd(), 'docs', '[name].html'),
-      data: {
-        baseHref
-      }
-    }),
-    // this plug reloads the browser with every code change
-    new webpack.HotModuleReplacementPlugin()
-  ],
+  plugins,
   module: {
     // this loader uses babel to transpile our JS code
     loaders: [
