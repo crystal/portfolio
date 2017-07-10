@@ -18,9 +18,10 @@ module.exports = {
   },
   // local dev server configurations
   devServer: {
-    host: '0.0.0.0',
+    host,
     port,
     contentBase: './docs',
+    disableHostCheck: true,
     publicPath: '/',
     hot: true,
     historyApiFallback: {
