@@ -3,6 +3,9 @@
   color: #000
   text-align: center
 
+  section
+    padding: 50px 10px
+
 .image
   background-color: #eee
   background-position: center center
@@ -19,12 +22,15 @@
     padding: 0 20px 20px 20px
 
 .tiles
-  display: flex
   list-style: none
   margin: 0
   padding: 0
 
   li
+    float: left
     margin: 0
     padding: 0 10px
     width: 33.3%
+
+    @media screen and (max-width: 800px)
+      width: 100%
