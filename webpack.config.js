@@ -1,13 +1,16 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HandlebarsWebpackPlugin = require('handlebars-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 3000;
+const isProduction = process.env.NODE_ENV === 'production';
 const app = [
   `webpack-dev-server/client?http://${host}:${port}`,
   './App.jsx'
 ];
+const baseHref = isProduction ? '/portfolio' : '/';
 
 module.exports = {
   // this is the path to your source files
@@ -22,7 +25,7 @@ module.exports = {
     port,
     contentBase: './docs',
     disableHostCheck: true,
-    publicPath: '/',
+    publicPath: baseHref,
     hot: true,
     historyApiFallback: {
       index: 'index.html'
@@ -35,9 +38,15 @@ module.exports = {
   // from the src directory to the docs folder
   plugins: [
     new CopyWebpackPlugin([
-      { from: 'images', to: 'images' },
-      { from: 'index.html' }
+      { from: 'images', to: 'images' }
     ]),
+    new HandlebarsWebpackPlugin({
+      entry: path.join(process.cwd(), 'src', '*.hbs'),
+      output: path.join(process.cwd(), 'docs', '[name].html'),
+      data: {
+        baseHref
+      }
+    }),
     // this plug reloads the browser with every code change
     new webpack.HotModuleReplacementPlugin()
   ],
