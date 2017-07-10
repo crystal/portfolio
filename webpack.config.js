@@ -29,7 +29,18 @@ const plugins = [
     }
   })
 ];
-if (!isProduction) {
+if (isProduction) {
+  plugins.push(
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    })
+  );
+  plugins.push(
+    new webpack.optimize.UglifyJsPlugin()
+  );
+} else {
   plugins.push(
     new webpack.HotModuleReplacementPlugin()
   );
