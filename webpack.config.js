@@ -10,7 +10,7 @@ const app = [
   `webpack-dev-server/client?http://${host}:${port}`,
   './App.jsx'
 ];
-const baseHref = isProduction ? '/portfolio' : '/';
+const baseHref = isProduction ? '/portfolio/' : '/';
 
 module.exports = {
   // this is the path to your source files
