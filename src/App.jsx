@@ -37,7 +37,7 @@ const history = syncHistoryWithStore(browserHistory, store);
 
 render(
   <Router history={history}>
-    <Route path="/" component={MainTemplate}>
+    <Route path={CONFIG.baseHref} component={MainTemplate}>
       <IndexRoute />
     </Route>
   </Router>,

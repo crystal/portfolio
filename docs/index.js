@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b5b515a42b601ee76909"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "76bd070c5895bcadcb85"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -28773,7 +28773,7 @@ var history = (0, _reactRouterRedux.syncHistoryWithStore)(_reactRouter.browserHi
   { history: history },
   _react2.default.createElement(
     _reactRouter.Route,
-    { path: '/', component: _Main2.default },
+    { path: {"baseHref":"/portfolio/"}.baseHref, component: _Main2.default },
     _react2.default.createElement(_reactRouter.IndexRoute, null)
   )
 ), document.getElementById('app'));

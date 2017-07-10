@@ -37,6 +37,11 @@ module.exports = {
   // two plugins we're using. one copies images, html & css
   // from the src directory to the docs folder
   plugins: [
+    new webpack.DefinePlugin({
+      CONFIG: JSON.stringify({
+        baseHref
+      })
+    }),
     new CopyWebpackPlugin([
       { from: 'images', to: 'images' }
     ]),
