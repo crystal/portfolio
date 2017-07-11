@@ -22,3 +22,19 @@ cd /app
 npm install # if necessary
 npm start
 ```
+
+## Build Project
+
+### Build for Development (./tmp)
+
+```
+# inside docker container
+npm run build
+```
+
+### Build for Production (./docs)
+
+```
+# inside docker container
+npm run build-production
+```

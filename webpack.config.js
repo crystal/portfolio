@@ -5,12 +5,25 @@ const webpack = require('webpack');
 
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 3000;
-const isProduction = process.env.NODE_ENV === 'production';
+
+const env = process.env.NODE_ENV === 'production' ? 'production' : 'development';
+
+const config = {
+  development: {
+    baseHref: '/',
+    outputPath: 'tmp'
+  },
+  production: {
+    baseHref: '/portfolio/',
+    outputPath: 'docs'
+  }
+};
+const { baseHref, outputPath } = config[env];
+
 const app = [
   `webpack-dev-server/client?http://${host}:${port}`,
   './App.jsx'
 ];
-const baseHref = isProduction ? '/portfolio/' : '/';
 
 const plugins = [
   new webpack.DefinePlugin({
@@ -23,13 +36,13 @@ const plugins = [
   ]),
   new HandlebarsWebpackPlugin({
     entry: path.join(process.cwd(), 'src', '*.hbs'),
-    output: path.join(process.cwd(), 'docs', '[name].html'),
+    output: path.join(process.cwd(), outputPath, '[name].html'),
     data: {
       baseHref
     }
   })
 ];
-if (isProduction) {
+if (env === 'production') {
   plugins.push(
     new webpack.DefinePlugin({
       'process.env': {
@@ -57,7 +70,7 @@ module.exports = {
   devServer: {
     host,
     port,
-    contentBase: './docs',
+    contentBase: `./${outputPath}`,
     disableHostCheck: true,
     publicPath: baseHref,
     hot: true,
@@ -108,7 +121,7 @@ module.exports = {
   // the JS file that's compiled from the JSX files
   output: {
     filename: 'index.js',
-    path: path.join(__dirname, 'docs')
+    path: path.join(__dirname, outputPath)
   },
   resolve: {
     extensions: [
