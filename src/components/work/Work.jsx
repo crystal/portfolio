@@ -20,7 +20,7 @@ class Work extends Component {
               <div className={styles.tile}>
                 <div className={styles.image} style={{ backgroundImage: 'url(images/Midpoint.png)' }}/>
                 <h3><a href="https://github.com/ht44/midpoint" target="_blank" rel="noopener noreferrer" >Midpoint</a></h3>
-                <p>Midpoint uses the location of a group of friends, calculates the midpoint and find points of interest near the middle.</p>
+                <p>Midpoint uses the location of a group of friends, calculates the midpoint and finds points of interest near the middle.</p>
               </div>
             </li>
             <li>
