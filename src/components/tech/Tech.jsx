@@ -19,7 +19,7 @@ class Tech extends Component {
             <li>
               <div className={styles.tile}>
                 <div className={classNames(styles.image, styles.react)} />
-                <h3>React</h3>
+                <h3>React / Redux</h3>
               </div>
             </li>
             <li>

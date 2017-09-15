@@ -22,11 +22,13 @@ class Header extends Component {
         <div className={styles.header}>
           <section>
             <div className={styles.logo}>
-              <img alt="Logo" src="images/devicon.png" />
+              <Link offset={-81} to="me" smooth onMouseUp={() => this.toggleMenu(false)}>
+                <img alt="Logo" src="images/devicon.png" />
+              </Link>
             </div>
             <ul className={styles.links}>
               <li>
-                <Link offset={-81} to="about" smooth>
+                <Link offset={-81} to="summary" smooth>
                   About
                 </Link>
               </li>
@@ -56,7 +58,7 @@ class Header extends Component {
         </div>
         <ul className={classNames(styles.menu, this.state.menuIsOpen ? styles.open : null)}>
           <li>
-            <Link offset={-81} to="about" smooth onMouseUp={() => this.toggleMenu(false)}>
+            <Link offset={-81} to="summary" smooth onMouseUp={() => this.toggleMenu(false)}>
               About
             </Link>
           </li>

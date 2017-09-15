@@ -6,6 +6,7 @@ import Footer from '../../components/footer/Footer';
 
 import Contact from '../../components/contact/Contact';
 import Me from '../../components/me/Me';
+import Summary from '../../components/summary/Summary';
 import Tech from '../../components/tech/Tech';
 import Work from '../../components/work/Work';
 
@@ -17,8 +18,11 @@ class MainTemplate extends Component {
       <div className={styles.main}>
         <Header />
         <div className={styles.blank} />
-        <Element name="about">
+        <Element name="me">
           <Me />
+        </Element>
+        <Element name="summary">
+          <Summary />
         </Element>
         <Element name="work">
           <Work />
