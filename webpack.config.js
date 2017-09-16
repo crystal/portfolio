@@ -1,4 +1,5 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HandlebarsWebpackPlugin = require('handlebars-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
@@ -26,6 +27,10 @@ const app = [
 ];
 
 const plugins = [
+  new FaviconsWebpackPlugin({
+    logo: path.join(__dirname, 'src/favicon.png'),
+    prefix: 'images/favicons/'
+  }),
   new webpack.DefinePlugin({
     CONFIG: JSON.stringify({
       baseHref
