@@ -11,11 +11,10 @@ class Summary extends Component {
             <div className={styles.image} />
           </div>
           <div className={styles.paragraph}>
-            <h3>Warm Hello!</h3>
-            <p>I'm a Full Stack Software Engineer and proud Galvanize alum. I'm based in Austin, Texas where I've worked remotely on distributed teams for 10 years.</p>
-            <p>I love to focus on the details, solve problems thoughtfully, and learn continuously.
-              I enjoy working my way through new languages and technologies to improve my skillset - as well as collaborating with other engineers on projects and hackathons.
-              In addition to coding, I love to hang out with my husband and our two dogs in sunny Austin.</p>
+            <h3>Hi. I'm Crystal! </h3>
+            <p>I'm a front-end software developer working in medtech.</p>
+            <p>When I'm not enjoying Austin with my husband and our pups, you'll find me at React & NodeJS meetups. I love to tinker with new languages, frameworks and dev tools to build interesting things. </p>
+            <p>Please say hi on <a href="https://twitter.com/crystal_tate" rel="noopener noreferrer" target="_blank">Twitter</a>!</p>
           </div>
         </section>
       </div>

@@ -7,7 +7,7 @@ class Footer extends Component {
     return (
       <div className={styles.footer}>
         <section>
-          &copy; 2017 | Crystal Tate
+          &copy; 2018 | Crystal Tate
         </section>
       </div>
     );
